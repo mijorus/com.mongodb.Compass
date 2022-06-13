@@ -18,9 +18,6 @@
         "--share=network",
         "--device=all"
     ],
-    "build-options": {
-        "append-path": "/usr/lib/sdk/node14/bin"
-    },
     "modules": [
         {
             "name": "run",
@@ -28,12 +25,18 @@
             "build-commands": [
                 "install -Dm755 -t /app/bin/ run.sh"
             ],
+            "build-options": {
+                "env": {
+                    "ZYPAK_SANDBOX_FILENAME": "chrome-sandbox",
+                    "ZYPAK_DEBUG": "1"
+                }
+            },
             "sources": [
                 {
                     "type": "script",
                     "dest-filename": "run.sh",
                     "commands": [
-                        "zypak-wrapper.sh '/app/main/MongoDB Compass'  \"$@\""
+                        "zypak-wrapper '/app/main/MongoDB Compass'"
                     ]
                 }
             ]
