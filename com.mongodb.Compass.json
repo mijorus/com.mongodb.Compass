@@ -15,10 +15,12 @@
         "--share=ipc",
         "--socket=x11",
         "--socket=pulseaudio",
+        "--talk-name=org.freedesktop.secrets",
         "--share=network",
         "--device=all"
     ],
     "modules": [
+        "shared-modules/libsecret/libsecret.json",
         {
             "name": "run",
             "buildsystem": "simple",
@@ -53,8 +55,8 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://github.com/mongodb-js/compass/releases/download/v1.32.0/mongodb-compass-1.32.0-linux-x64.tar.gz",
-                    "sha256": "c4898aa599e70721d9446134e2c993b8a11cd9339121bcfdbdc3377c36d06ca4",
+                    "url": "https://github.com/mongodb-js/compass/releases/download/v1.32.2/mongodb-compass-1.32.2-linux-x64.tar.gz",
+                    "sha256": "d69d97c9a0ea26c5602147b6467fd6aeb4d7e20e8feefd4a03d2639d58b89dfe",
                     "dest": "main"
                 }
             ]
