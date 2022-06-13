@@ -1,0 +1,68 @@
+{
+    "app-id": "com.mongodb.Compass",
+    "base": "org.electronjs.Electron2.BaseApp",
+    "base-version": "21.08",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "21.08",
+    "sdk": "org.freedesktop.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.node14"
+    ],
+    "command": "run.sh",
+    "separate-locales": false,
+    "tags": [
+        "proprietary"
+    ],
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=pulseaudio",
+        "--share=network",
+        "--device=all"
+    ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/node14/bin"
+    },
+    "modules": [
+        {
+            "name": "run",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm755 -t /app/bin/ run.sh"
+            ],
+            "build-options": {
+                "env": {
+                    "npm_config_nodedir": "/usr/lib/sdk/node14",
+                    "npm_config_offline": "true"
+                }
+            },
+            "sources": [
+                {
+                    "type": "script",
+                    "dest-filename": "run.sh",
+                    "commands": [
+                        "zypak-wrapper.sh '/app/main/MongoDB Compass'  \"$@\""
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "compass",
+            "buildsystem": "simple",
+            "build-commands": [
+                "cp -r main /app/main"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "only-arches": [
+                        "x86_64"
+                    ],
+                    "url": "https://github.com/mongodb-js/compass/releases/download/v1.32.0/mongodb-compass-1.32.0-linux-x64.tar.gz",
+                    "sha256": "c4898aa599e70721d9446134e2c993b8a11cd9339121bcfdbdc3377c36d06ca4",
+                    "dest": "main"
+                }
+            ]
+        }
+    ]
+}
