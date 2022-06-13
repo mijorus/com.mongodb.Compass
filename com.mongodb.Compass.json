@@ -28,12 +28,6 @@
             "build-commands": [
                 "install -Dm755 -t /app/bin/ run.sh"
             ],
-            "build-options": {
-                "env": {
-                    "npm_config_nodedir": "/usr/lib/sdk/node14",
-                    "npm_config_offline": "true"
-                }
-            },
             "sources": [
                 {
                     "type": "script",
