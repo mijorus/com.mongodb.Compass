@@ -16,8 +16,7 @@
         "--socket=x11",
         "--socket=pulseaudio",
         "--talk-name=org.freedesktop.secrets",
-        "--share=network",
-        "--device=all"
+        "--share=network"
     ],
     "modules": [
         "shared-modules/libsecret/libsecret.json",
