@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
     <id>com.mongodb.Compass</id>
-    <metadata_license>SSPL-1.0</metadata_license>
+    <metadata_license>MIT</metadata_license>
+    <project_license>LicenseRef-proprietary=SSPL-1.0</project_license>
     <name>MongoDB Compass</name>
     <summary>Compass is an interactive tool for querying, optimizing, and analyzing your MongoDB data. Get key insights, drag and drop to build pipelines, and more.</summary>
     <description>
@@ -13,9 +14,6 @@
     <screenshots>
         <screenshot type="default">
             <image>https://www.mongodb.com/docs/compass/current/images/tabs/query-your-data.png</image>
-        </screenshot>
-        <screenshot>
-            <image>https://www.mongodb.com/docs/compass/current/images/tabs/create-aggregation-pipelines.png</image>
         </screenshot>
         <screenshot>
             <image>https://www.mongodb.com/docs/compass/current/images/tabs/run-commands-in-the-shell.png</image>
