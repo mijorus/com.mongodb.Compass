@@ -48,10 +48,7 @@
             "buildsystem": "simple",
             "build-commands": [
                 "cp -r main /app/main",
-                "install -Dm 644 icon-128x128.png /app/share/icons/hicolor/128x128/apps/com.mongodb.Compass.png",
-                "install -Dm 644 icon-256x256.png /app/share/icons/hicolor/256x256/apps/com.mongodb.Compass.png",
-                "install -Dm 644 icon-48x48.png /app/share/icons/hicolor/48x48/apps/com.mongodb.Compass.png",
-                "install -Dm 644 icon-96x96.png /app/share/icons/hicolor/96x96/apps/com.mongodb.Compass.png",
+                "install -Dm 644 mongodb-compass.png /app/share/icons/hicolor/256x256/apps/com.mongodb.Compass.png",
                 "install -Dm 644 mongodb-compass.desktop /app/share/applications/com.mongodb.Compass"
             ],
             "sources": [
@@ -66,23 +63,8 @@
                 },
                 {
                     "type": "file",
-                    "path": "icons/icon-128x128.png"
-                },
-                {
-                    "type": "file",
-                    "path": "icons/icon-256x256.png"
-                },
-                {
-                    "type": "file",
-                    "path": "icons/icon-96x96.png"
-                },
-                {
-                    "type": "file",
-                    "path": "icons/icon-48x48.png"
-                },
-                {
-                    "type": "file",
-                    "path": "./mongodb-compass.desktop"
+                    "url": "https://github.com/mongodb-js/compass/raw/main/packages/compass/app-icons/linux/mongodb-compass.png",
+                    "sha256": "d2e2a75cbbac65600ef084edec69d0ed1910e7fa32abeff3bd66b2853e1d1ba0"
                 }
             ]
         }
